@@ -19,7 +19,7 @@ This week        █░░░░░░░░░░░░░░░░░░░   
 Type this at the Claude Code prompt:
 
 ```
-/plugin install quota-band --marketplace <owner>/<repo>
+/plugin install quota-band --marketplace SanjayPG/claude-quota-band
 ```
 
 1. Answer `y` when asked to add the marketplace.
