@@ -1,4 +1,4 @@
-# quota-band
+# Claude Code Usage Tracker
 
 A [Claude Code](https://claude.com/claude-code) mod that shows how much of your usage you have left, as colour-coded progress bars above the prompt.
 
@@ -19,7 +19,7 @@ This week        █░░░░░░░░░░░░░░░░░░░   
 Type this at the Claude Code prompt:
 
 ```
-/plugin install quota-band --marketplace SanjayPG/claude-quota-band
+/plugin install usage-tracker --marketplace SanjayPG/claude-code-usage-tracker
 ```
 
 1. Answer `y` when asked to add the marketplace.
@@ -41,7 +41,7 @@ Mods cannot draw in the top-right corner of the screen. The bars sit right-align
 ## Uninstall
 
 ```
-/plugin uninstall quota-band
+/plugin uninstall usage-tracker
 ```
 
 ## How it works

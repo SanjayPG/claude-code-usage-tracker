@@ -1,5 +1,5 @@
 {
-  "name": "quota-band",
+  "name": "usage-tracker",
   "version": "0.1.0",
   "author": { "name": "Sanjay Gorai" },
   "description": "Shows your remaining Claude usage (current session and this week) as colour-coded progress bars above the prompt.",

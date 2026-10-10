@@ -3,7 +3,7 @@ import type { Register } from 'claude-code'
 
 import type { QuotaWindow } from '../types'
 
-const windows = atom({ plugin: 'quota-band', key: 'windows' } as const, [] as QuotaWindow[])
+const windows = atom({ plugin: 'usage-tracker', key: 'windows' } as const, [] as QuotaWindow[])
 
 const ROWS = [
   { kind: 'five_hour', label: 'Current session' },
