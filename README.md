@@ -53,6 +53,10 @@ Two hooks in `hooks/register.tsx`:
 
 Change the look by editing the constants at the top of that file (`BAR_WIDTH`, `TRACK`, `LABEL`, the colour thresholds in `fillFor`).
 
+## Build it yourself
+
+Prefer to set it up by hand, or want to see how each file works? Follow the [step-by-step guide](docs/SETUP.md).
+
 ## Develop
 
 ```
