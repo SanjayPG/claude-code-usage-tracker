@@ -1,0 +1,8 @@
+{
+  "name": "quota-band",
+  "version": "0.1.0",
+  "author": { "name": "Sanjay Gorai" },
+  "description": "Shows your remaining Claude usage (current session and this week) as colour-coded progress bars above the prompt.",
+  "license": "MIT",
+  "types": "./types/index.d.ts"
+}

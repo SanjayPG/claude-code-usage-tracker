@@ -1,0 +1,6 @@
+{
+  "name": "quota-band",
+  "description": "A Claude Code mod that shows your usage quota as progress bars.",
+  "owner": { "name": "Sanjay Gorai" },
+  "plugins": [{ "name": "quota-band", "source": "./" }]
+}
