@@ -43,6 +43,16 @@ Mods cannot draw in the top-right corner of the screen. The bars sit right-align
 
 The desktop layout is newer and less tested than the terminal one.
 
+## Usage feed file
+
+Whenever your usage changes, the mod also writes a small JSON file to `~/.claude/usage-feed.json` (on Windows, `%USERPROFILE%\.claude\usage-feed.json`), for example:
+
+```json
+{"updatedAt":"2026-10-10T20:59:15.263Z","five_hour":{"usedPercent":34,"resetsAt":"2026-10-10T21:40:00.000Z"},"seven_day":{"usedPercent":5,"resetsAt":"2026-10-16T06:00:00.000Z"}}
+```
+
+It holds only the percentages and reset times Claude Code already shows you, nothing about your account or conversations, and it never leaves your machine. Other tools (such as a tray app) can read it. If the write fails, the on-screen bars still work. To stop it, uninstall the plugin and delete the file.
+
 ## Uninstall
 
 ```

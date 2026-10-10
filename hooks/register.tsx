@@ -77,7 +77,23 @@ export const register: Register = on => {
   // session.measure fires when a window moves a whole point, so the bars track live quota.
   on('session.measure', async ($, e, next) => {
     if (e.changed.includes('rateLimits')) {
-      await update($, windows, () => e.rateLimits.filter(w => ROWS.some(r => r.kind === w.kind)))
+      const tracked = e.rateLimits.filter(w => ROWS.some(r => r.kind === w.kind))
+      await update($, windows, () => tracked)
+
+      // A small JSON feed for the Windows tray app. A failed write must never break the session.
+      const home = (await $.env.get('USERPROFILE')) ?? (await $.env.get('HOME'))
+      if (home && tracked.length > 0) {
+        const feed: Record<string, unknown> = { updatedAt: new Date(await $.clock.now()).toISOString() }
+        for (const w of tracked) {
+          feed[w.kind] = { usedPercent: w.percentUsed, resetsAt: w.resetsAt ?? null }
+        }
+
+        try {
+          await $.fs.write(`${home}/.claude/usage-feed.json`, JSON.stringify(feed))
+        } catch {
+          // Feed is optional; the on-screen card still works.
+        }
+      }
     }
 
     return next(e)
