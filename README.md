@@ -38,6 +38,11 @@ You do not need to copy any files or edit any settings by hand.
 
 Mods cannot draw in the top-right corner of the screen. The bars sit right-aligned above the prompt, the closest slot Claude Code offers.
 
+- **Terminal:** block-character bars. Claude Code adds its own `[-]` control to minimise them.
+- **Claude Code Desktop, VS Code and mobile:** a drawn card with a **Minimise** button that collapses it to one line (`Usage  Session 26%  Week 4%`), and an **Expand** button to bring it back.
+
+The desktop layout is newer and less tested than the terminal one.
+
 ## Uninstall
 
 ```
